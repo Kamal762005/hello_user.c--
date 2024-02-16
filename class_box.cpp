@@ -2,10 +2,9 @@
 using namespace std;
 
 class Box{
-    private:
-    float l,w,h;
     public:
     int n;
+    float l,w,h;
     void boxArea(float length, float width) 
     {
         l=length;
@@ -35,11 +34,10 @@ void Box::boxVolume(float length, float width, float height)
 }
 int main(){
     Box obj;
-    float a,b,c;
     cout<<"enter length, width and height of box"<<endl;
-    cin>>a>>b>>c;
-    obj.boxArea(a,b);
-    obj.boxVolume(a,b,c);
+    cin>>obj.l>>obj.w>>obj.h;
+    obj.boxArea(obj.l,obj.w);
+    obj.boxVolume(obj.l,obj.w,obj.h);
     displayBoxDimensions(obj);
     obj.displayMessage();
     return 0;
