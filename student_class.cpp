@@ -23,16 +23,15 @@ class Student{
 };
 
 void displayPrivate(Student s){
-    cout<<s.fullName<<endl;
-    cout<<s.rollNum<<endl;
-    cout<<s.semPercentage<<endl;
-    cout<<s.collegeName<<endl;
-    cout<<s.collegeCode<<endl;
+    cout<<"STUDENT NAME: "<<s.fullName<<endl;
+    cout<<"STUDENT ROLL NO: "<<s.rollNum<<endl;
+    cout<<"STUDENT SEM PERCENTAGE: "<<s.semPercentage<<endl;
+    cout<<"COLLEGE NAME: "<<s.collegeName<<endl;
+    cout<<"COLLEGE CODE: "<<s.collegeCode<<endl;
 
 }
 
 int main() {
-    Student student("krishna mohan",26,7.123,"MVGR",33);
+    Student student("Chalumuri. kamal ",530,8.71,"MAHARAJ VIJAYARAM COLLEGE OF ENGINEERING",33);
     displayPrivate(student);
 }
-
