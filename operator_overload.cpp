@@ -1,17 +1,17 @@
 #include<iostream>
 using namespace std;
-class Method{
+class Operator{
     int a;
     public:
     //default constructor
-    Method(int a=0){
+    Operator(int a=0){
         this->a=a;
     }
-    //operator overloading method 
+    //operator overloading Operator 
     // This is automatically called when '-' is used with a class objects
-    Method operator-(Method &temp){
-        Method f;
-        f.a=a-temp.a;
+    Operator operator-(Operator &temp){
+        Operator f;
+        f.a=f.a-temp.a;
         return f;
     }
     void print() {
@@ -22,7 +22,7 @@ int main(){
     int a,b;
     cout<<"enter two values to subtract : ";
     cin>>a>>b;
-    Method c(a),d(b),e;
+    Operator c(a),d(b),e;
     e=c-d;
     cout<<"operator overloading: ";
     e.print();
