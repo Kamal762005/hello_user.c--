@@ -2,7 +2,7 @@
 using namespace std;
 class Method{
     public:
-    int a,b;
+    float a,b;
     void fun(){
         cout<<"function is called \n";
     }
@@ -17,7 +17,7 @@ class Method{
     }
 };
 int main(){
-    int a,b;
+    float a,b;
     cout<<"enter the values : ";
     cin>>a>>b;
     Method c;
