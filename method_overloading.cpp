@@ -1,33 +1,41 @@
+//Demonstrate method/function overloading in C++.
 #include<iostream>
 using namespace std;
 class Method{
     public:
-    float a,b;
+    int a,b;
     void fun(){
-        cout<<"function is called \n";
+        a=0,b=0;
+        cout<<" the values of a and b are : "<<a<<" and "<<b<<endl;
+    }
+    void fun(int a){
+        this->a=a;
+        cout<<"the values of a and b are : "<<a<<" and "<<b<<endl;
     }
     void fun(int a,int b){
         this->a=a,this->b=b;
+        cout<<"the values of a and b are : "<<a<<" and "<<b<<endl;
     }
-    void fun(float a,float b){
-        this->a=a,this->b=b;
-    }
-    void print(){
+/*    void print(){
         cout<<"the value of a is : "<<a<<endl<<"the value of b is : "<<b<<endl;
-    }
+    }*/
 };
 int main(){
-    float a,b;
-    cout<<"enter the values : ";
-    cin>>a>>b;
+    int a,b;
     Method c;
-    c.fun();
     cout<<"initially the values are : \n";
     //printing the initial vlaues of the variables a and b.
-    c.print();
-    cout<<"after assigning the values are : \n";
-    c.fun(a,b);
+    c.fun();
+    cout<<"enter the value of a: ";
+    cin>>a;
+    
+    //assigning the variable a .
+    c.fun(a);
+    cout<<"enter the value of b: ";
+    cin>>b;
+
     //the values are assigned to the variables a and b.
-    c.print();
-    return 0;
+    cout<<"after assigning the values are : \n";
+    c.fun(a,b); 
+    return 0;  
 }
